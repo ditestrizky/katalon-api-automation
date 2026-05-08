@@ -1,0 +1,154 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS-Regression_Full,,,,08-05-2026 09:32:34,08-05-2026 09:32:41,6.704s,PASSED
+,,,,,,,
+Test Cases/Auth/TC-AUTH-001_Login_Valid,,,,08-05-2026 09:32:34,08-05-2026 09:32:36,1.275s,PASSED
+"req = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:35,08-05-2026 09:32:35,0.025s,PASSED
+response = sendRequest(req),,,,08-05-2026 09:32:35,08-05-2026 09:32:36,1.029s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.014s,PASSED
+"assert response.getElapsedTime() < 2000 : ""Response to slow!""",,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.006s,PASSED
+"token = getElementPropertyValue(response, ""accessToken"")",,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.045s,PASSED
+"assert token != null && token != """" : ""Token tidak boleh kosong!""",,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.001s,PASSED
+println(TC-AUTH-001 Passed - Token: $token),,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.017s,PASSED
+,,,,,,,
+Test Cases/Auth/TC-AUTH-002-Login-Invalid-Password,,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.311s,PASSED
+"req = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.004s,PASSED
+response = sendRequest(req),,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.225s,PASSED
+"verifyResponseStatusCode(response, 400)",,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.005s,PASSED
+"message = getElementPropertyValue(response, ""message"")",,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.018s,PASSED
+"assert message == ""Invalid credentials"" : ""Wrong error message!""",,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.001s,PASSED
+println(✅ TC-AUTH-002 PASSED — Error message: $message),,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.001s,PASSED
+,,,,,,,
+Test Cases/Auth/TC-AUTH-003_Login_Unregistered_Username,,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.297s,PASSED
+"req = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.003s,PASSED
+response = sendRequest(req),,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.216s,PASSED
+"verifyResponseStatusCode(response, 400)",,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.008s,PASSED
+"message = getElementPropertyValue(response, ""message"")",,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.017s,PASSED
+"assert message != null : ""Error message harus ada!""",,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.001s,PASSED
+println(TC-AUTH-003 PASSED — Error message: $message),,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.001s,PASSED
+,,,,,,,
+Test Cases/Auth/TC-AUTH-004_Login_Blank_Username,,,,08-05-2026 09:32:36,08-05-2026 09:32:37,0.298s,PASSED
+"req = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:36,08-05-2026 09:32:36,0.002s,PASSED
+response = sendRequest(req),,,,08-05-2026 09:32:36,08-05-2026 09:32:37,0.223s,PASSED
+"verifyResponseStatusCode(response, 400)",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.003s,PASSED
+"message = getElementPropertyValue(response, ""message"")",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.015s,PASSED
+"assert message != null : ""Error message harus ada!""",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.001s,PASSED
+println(TC-AUTH-004 PASSED — Error message: $message),,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.001s,PASSED
+,,,,,,,
+Test Cases/Auth/TC-AUTH-005_Login_Blank_Password,,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.284s,PASSED
+"req = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.002s,PASSED
+response = sendRequest(req),,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.217s,PASSED
+"verifyResponseStatusCode(response, 400)",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.003s,PASSED
+"message = getElementPropertyValue(response, ""message"")",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.017s,PASSED
+"assert message != null : ""Error message harus ada!""",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.001s,PASSED
+println(TC-AUTH-005 PASSED — Error message: $message),,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.001s,PASSED
+,,,,,,,
+Test Cases/User/TC-USER-001_getUser_ValidToken,,,,08-05-2026 09:32:37,08-05-2026 09:32:38,0.682s,PASSED
+"loginRequest = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.002s,PASSED
+loginResponse = sendRequest(loginRequest),,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.244s,PASSED
+"verifyResponseStatusCode(loginResponse, 200)",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.002s,PASSED
+"token = getElementPropertyValue(loginResponse, ""accessToken"")",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.017s,PASSED
+"assert token != null && token != """" : ""Token tidak boleh kosong!""",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.002s,PASSED
+"userRequest = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.012s,PASSED
+userResponse = sendRequest(userRequest),,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.211s,PASSED
+"verifyResponseStatusCode(userResponse, 200)",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.003s,PASSED
+"assert userResponse.getElapsedTime() < 2000 : ""Responsenya Cukup Memakan Waktu""",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.002s,PASSED
+"id = getElementPropertyValue(userResponse, ""id"")",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.022s,PASSED
+"firstName = getElementPropertyValue(userResponse, ""firstName"")",,,,08-05-2026 09:32:37,08-05-2026 09:32:37,0.020s,PASSED
+"lastName = getElementPropertyValue(userResponse, ""lastName"")",,,,08-05-2026 09:32:37,08-05-2026 09:32:38,0.017s,PASSED
+"email = getElementPropertyValue(userResponse, ""email"")",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.021s,PASSED
+"username = getElementPropertyValue(userResponse, ""username"")",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.015s,PASSED
+"role = getElementPropertyValue(userResponse, ""role"")",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.016s,PASSED
+"assert id != null : ""id harus ada!""",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.001s,PASSED
+"assert firstName != null : ""firstName harus ada!""",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.001s,PASSED
+"assert lastName != null : ""lastName harus ada!""",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.001s,PASSED
+"assert email != null : ""email harus ada!""",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.000s,PASSED
+"assert username == ""emilys"" : ""Username should be emilys!""",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.000s,PASSED
+"assert role != null : ""role harus ada!""",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.001s,PASSED
+"assert id instanceof java.lang.Integer : ""id harus int""",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.001s,PASSED
+"assert firstName instanceof java.lang.String : ""firstName harus string yaa""",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.000s,PASSED
+"println(TC-USER-001 PASSED - User: $firstName $lastName, email: $email, role: $role)",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.001s,PASSED
+,,,,,,,
+Test Cases/User/TC-USER-002_getUser_InvalidToken,,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.295s,PASSED
+"userReq = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.001s,PASSED
+response = sendRequest(userReq),,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.226s,PASSED
+"verifyResponseStatusCode(response, 401)",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.003s,PASSED
+"message = getElementPropertyValue(response, ""message"")",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.020s,PASSED
+"assert message != null : ""Error message should exist!""",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.001s,PASSED
+println(TC-USER-002 PASSED — Unauthorized access correctly rejected: $message),,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.001s,PASSED
+,,,,,,,
+Test Cases/User/TC-USER-003_getUser_ExpiredToken,,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.287s,PASSED
+"expToken = ""eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJpYXQiOjE2MDAwMDAwMDAsImV4cCI6MTYwMDAwMzYwMH0.dummy""",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.001s,PASSED
+"userReq = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.002s,PASSED
+response = sendRequest(userReq),,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.222s,PASSED
+"verifyResponseStatusCode(response, 401)",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.002s,PASSED
+"message = getElementPropertyValue(response, ""message"")",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.016s,PASSED
+"assert message != null : ""Error message should exist!""",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.000s,PASSED
+println(TC-USER-003 PASSED — Expired token correctly rejected: $message),,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.000s,PASSED
+,,,,,,,
+Test Cases/User/TC-USER-004_getUser_notExist,,,,08-05-2026 09:32:38,08-05-2026 09:32:39,0.492s,PASSED
+"loginReq = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.002s,PASSED
+loginResponse = sendRequest(loginReq),,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.205s,PASSED
+"token = getElementPropertyValue(loginResponse, ""accessToken"")",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.014s,PASSED
+"userReq = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:38,08-05-2026 09:32:38,0.002s,PASSED
+response = sendRequest(userReq),,,,08-05-2026 09:32:38,08-05-2026 09:32:39,0.202s,PASSED
+"verifyResponseStatusCode(response, 404)",,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.002s,PASSED
+"message = getElementPropertyValue(response, ""message"")",,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.015s,PASSED
+"assert message != null : ""Error message should exist!""",,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.000s,PASSED
+println(TC-USER-004 PASSED — Non-existent user correctly returned 404: $message),,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.000s,PASSED
+,,,,,,,
+Test Cases/User/TC-USER-005-ResponseTime,,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.502s,PASSED
+"loginReq = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.001s,PASSED
+loginResponse = sendRequest(loginReq),,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.217s,PASSED
+"token = getElementPropertyValue(loginResponse, ""accessToken"")",,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.013s,PASSED
+"userReq = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.002s,PASSED
+response = sendRequest(userReq),,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.228s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.002s,PASSED
+elapsedTime = response.getElapsedTime(),,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.001s,PASSED
+assert elapsedTime < 1000,,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.001s,PASSED
+println(TC-USER-005 PASSED — Response time: $elapsedTimems (threshold: 1000ms)),,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.000s,PASSED
+,,,,,,,
+Test Cases/Validation/TC-VAL-001_Schema_Check,,,,08-05-2026 09:32:39,08-05-2026 09:32:40,0.533s,PASSED
+"loginReq = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.001s,PASSED
+loginResponse = sendRequest(loginReq),,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.215s,PASSED
+"token = getElementPropertyValue(loginResponse, ""accessToken"")",,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.017s,PASSED
+"userReq = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:39,08-05-2026 09:32:39,0.002s,PASSED
+response = sendRequest(userReq),,,,08-05-2026 09:32:39,08-05-2026 09:32:40,0.213s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.002s,PASSED
+json = JsonSlurper().parseText(response.getResponseBodyContent()),,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.001s,PASSED
+"requiredKeys = [""id"", ""firstName"", ""lastName"", ""email"", ""username"", ""role"", ""image""]",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.001s,PASSED
+requiredKeys.each({ java.lang.Object key -> ... }),,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.008s,PASSED
+"println(""TC-VAL-001 PASSED — All required schema fields present"")",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.001s,PASSED
+,,,,,,,
+Test Cases/Validation/TC-VAL-002_Required_Fields_Present,,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.521s,PASSED
+"loginReq = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.001s,PASSED
+loginResponse = sendRequest(loginReq),,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.225s,PASSED
+"token = getElementPropertyValue(loginResponse, ""accessToken"")",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.015s,PASSED
+"userReq = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.001s,PASSED
+response = sendRequest(userReq),,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.212s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.002s,PASSED
+json = JsonSlurper().parseText(response.getResponseBodyContent()),,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.001s,PASSED
+"assert id != null : ""id should not be null!""",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.001s,PASSED
+"assert firstName != null && firstName != """" : ""firstName should not be null or empty!""",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.000s,PASSED
+"assert lastName != null && lastName != """" : ""lastName should not be null or empty!""",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.001s,PASSED
+"assert email != null && email != """" : ""email should not be null or empty!""",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.000s,PASSED
+"assert username != null && username != """" : ""username should not be null or empty!""",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.001s,PASSED
+"assert role != null && role != """" : ""role should not be null or empty!""",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.002s,PASSED
+"assert image != null && image != """" : ""image should not be null or empty!""",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.000s,PASSED
+"println(""TC-VAL-002 PASSED — All required fields present and not empty"")",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.001s,PASSED
+,,,,,,,
+Test Cases/Validation/TC-VAL-003_Data_Type_Validation,,,,08-05-2026 09:32:40,08-05-2026 09:32:41,0.509s,PASSED
+"loginReq = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.001s,PASSED
+loginResponse = sendRequest(loginReq),,,,08-05-2026 09:32:40,08-05-2026 09:32:40,0.222s,PASSED
+"token = getElementPropertyValue(loginResponse, ""accessToken"")",,,,08-05-2026 09:32:40,08-05-2026 09:32:41,0.013s,PASSED
+"userReq = EQUALS, application/json)]).build()",,,,08-05-2026 09:32:41,08-05-2026 09:32:41,0.001s,PASSED
+response = sendRequest(userReq),,,,08-05-2026 09:32:41,08-05-2026 09:32:41,0.210s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,08-05-2026 09:32:41,08-05-2026 09:32:41,0.002s,PASSED
+json = JsonSlurper().parseText(response.getResponseBodyContent()),,,,08-05-2026 09:32:41,08-05-2026 09:32:41,0.001s,PASSED
+"assert id instanceof java.lang.Integer : ""id should be Integer!""",,,,08-05-2026 09:32:41,08-05-2026 09:32:41,0.001s,PASSED
+"assert firstName instanceof java.lang.String : ""firstName should be String!""",,,,08-05-2026 09:32:41,08-05-2026 09:32:41,0.000s,PASSED
+"assert lastName instanceof java.lang.String : ""lastName should be String!""",,,,08-05-2026 09:32:41,08-05-2026 09:32:41,0.000s,PASSED
+"assert email instanceof java.lang.String : ""email should be String!""",,,,08-05-2026 09:32:41,08-05-2026 09:32:41,0.000s,PASSED
+"assert username instanceof java.lang.String : ""username should be String!""",,,,08-05-2026 09:32:41,08-05-2026 09:32:41,0.000s,PASSED
+"assert age instanceof java.lang.Integer : ""age should be Integer!""",,,,08-05-2026 09:32:41,08-05-2026 09:32:41,0.001s,PASSED
+"assert role instanceof java.lang.String : ""role should be String!""",,,,08-05-2026 09:32:41,08-05-2026 09:32:41,0.001s,PASSED
+"println(""TC-VAL-003 PASSED — All fields have correct data types"")",,,,08-05-2026 09:32:41,08-05-2026 09:32:41,0.001s,PASSED

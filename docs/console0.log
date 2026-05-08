@@ -1,0 +1,209 @@
+Warning: NLS unused message: QTEST in: com.kms.katalon.constants.globalMessages
+Warning: NLS missing message: QTEST_NAME in: com.kms.katalon.constants.globalMessages
+2026-05-08 09:32:34.502 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/TS-Regression_Full
+2026-05-08 09:32:34.574 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Rizky Haryadi
+2026-05-08 09:32:34.575 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = web-service-tests
+2026-05-08 09:32:34.575 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = Haryadi - DESKTOP-LA5M7LN
+2026-05-08 09:32:34.576 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 11 64bit
+2026-05-08 09:32:34.576 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 192.168.100.84
+2026-05-08 09:32:34.577 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.2.4.0
+2026-05-08 09:32:34.909 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-05-08 09:32:34.909 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/Auth/TC-AUTH-001_Login_Valid
+2026-05-08 09:32:35.041 DEBUG testcase.TC-AUTH-001_Login_Valid         - 1: req = EQUALS, application/json)]).build()
+2026-05-08 09:32:35.066 DEBUG testcase.TC-AUTH-001_Login_Valid         - 2: response = sendRequest(req)
+2026-05-08 09:32:36.031 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_0.har
+2026-05-08 09:32:36.095 DEBUG testcase.TC-AUTH-001_Login_Valid         - 3: verifyResponseStatusCode(response, 200)
+2026-05-08 09:32:36.110 DEBUG testcase.TC-AUTH-001_Login_Valid         - 4: assert response.getElapsedTime() < 2000 : "Response to slow!"
+2026-05-08 09:32:36.117 DEBUG testcase.TC-AUTH-001_Login_Valid         - 5: token = getElementPropertyValue(response, "accessToken")
+2026-05-08 09:32:36.163 DEBUG testcase.TC-AUTH-001_Login_Valid         - 6: assert token != null && token != "" : "Token tidak boleh kosong!"
+2026-05-08 09:32:36.164 DEBUG testcase.TC-AUTH-001_Login_Valid         - 7: println(TC-AUTH-001 Passed - Token: $token)
+TC-AUTH-001 Passed - Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3NzgyMDc1NTUsImV4cCI6MTc3ODIxMTE1NX0.0aVpkaftIfW8zldB40MIvQgzfedVitLwPSpfuBHwT9s
+2026-05-08 09:32:36.184 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/Auth/TC-AUTH-001_Login_Valid
+2026-05-08 09:32:36.187 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-05-08 09:32:36.188 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/Auth/TC-AUTH-002-Login-Invalid-Password
+2026-05-08 09:32:36.243 DEBUG t.TC-AUTH-002-Login-Invalid-Password     - 1: req = EQUALS, application/json)]).build()
+2026-05-08 09:32:36.246 DEBUG t.TC-AUTH-002-Login-Invalid-Password     - 2: response = sendRequest(req)
+2026-05-08 09:32:36.468 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_1.har
+2026-05-08 09:32:36.472 DEBUG t.TC-AUTH-002-Login-Invalid-Password     - 3: verifyResponseStatusCode(response, 400)
+2026-05-08 09:32:36.477 DEBUG t.TC-AUTH-002-Login-Invalid-Password     - 4: message = getElementPropertyValue(response, "message")
+2026-05-08 09:32:36.495 DEBUG t.TC-AUTH-002-Login-Invalid-Password     - 5: assert message == "Invalid credentials" : "Wrong error message!"
+2026-05-08 09:32:36.497 DEBUG t.TC-AUTH-002-Login-Invalid-Password     - 6: println(✅ TC-AUTH-002 PASSED — Error message: $message)
+✅ TC-AUTH-002 PASSED — Error message: Invalid credentials
+2026-05-08 09:32:36.499 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/Auth/TC-AUTH-002-Login-Invalid-Password
+2026-05-08 09:32:36.502 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-05-08 09:32:36.502 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/Auth/TC-AUTH-003_Login_Unregistered_Username
+2026-05-08 09:32:36.550 DEBUG .TC-AUTH-003_Login_Unregistered_Username - 1: req = EQUALS, application/json)]).build()
+2026-05-08 09:32:36.552 DEBUG .TC-AUTH-003_Login_Unregistered_Username - 2: response = sendRequest(req)
+2026-05-08 09:32:36.761 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_2.har
+2026-05-08 09:32:36.768 DEBUG .TC-AUTH-003_Login_Unregistered_Username - 3: verifyResponseStatusCode(response, 400)
+2026-05-08 09:32:36.778 DEBUG .TC-AUTH-003_Login_Unregistered_Username - 4: message = getElementPropertyValue(response, "message")
+2026-05-08 09:32:36.795 DEBUG .TC-AUTH-003_Login_Unregistered_Username - 5: assert message != null : "Error message harus ada!"
+2026-05-08 09:32:36.797 DEBUG .TC-AUTH-003_Login_Unregistered_Username - 6: println(TC-AUTH-003 PASSED — Error message: $message)
+TC-AUTH-003 PASSED — Error message: Invalid credentials
+2026-05-08 09:32:36.799 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/Auth/TC-AUTH-003_Login_Unregistered_Username
+2026-05-08 09:32:36.801 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-05-08 09:32:36.802 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/Auth/TC-AUTH-004_Login_Blank_Username
+2026-05-08 09:32:36.852 DEBUG t.TC-AUTH-004_Login_Blank_Username       - 1: req = EQUALS, application/json)]).build()
+2026-05-08 09:32:36.854 DEBUG t.TC-AUTH-004_Login_Blank_Username       - 2: response = sendRequest(req)
+2026-05-08 09:32:37.071 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_3.har
+2026-05-08 09:32:37.078 DEBUG t.TC-AUTH-004_Login_Blank_Username       - 3: verifyResponseStatusCode(response, 400)
+2026-05-08 09:32:37.082 DEBUG t.TC-AUTH-004_Login_Blank_Username       - 4: message = getElementPropertyValue(response, "message")
+2026-05-08 09:32:37.097 DEBUG t.TC-AUTH-004_Login_Blank_Username       - 5: assert message != null : "Error message harus ada!"
+2026-05-08 09:32:37.098 DEBUG t.TC-AUTH-004_Login_Blank_Username       - 6: println(TC-AUTH-004 PASSED — Error message: $message)
+TC-AUTH-004 PASSED — Error message: Username and password required
+2026-05-08 09:32:37.100 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/Auth/TC-AUTH-004_Login_Blank_Username
+2026-05-08 09:32:37.102 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-05-08 09:32:37.103 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/Auth/TC-AUTH-005_Login_Blank_Password
+2026-05-08 09:32:37.145 DEBUG t.TC-AUTH-005_Login_Blank_Password       - 1: req = EQUALS, application/json)]).build()
+2026-05-08 09:32:37.147 DEBUG t.TC-AUTH-005_Login_Blank_Password       - 2: response = sendRequest(req)
+2026-05-08 09:32:37.358 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_4.har
+2026-05-08 09:32:37.364 DEBUG t.TC-AUTH-005_Login_Blank_Password       - 3: verifyResponseStatusCode(response, 400)
+2026-05-08 09:32:37.367 DEBUG t.TC-AUTH-005_Login_Blank_Password       - 4: message = getElementPropertyValue(response, "message")
+2026-05-08 09:32:37.383 DEBUG t.TC-AUTH-005_Login_Blank_Password       - 5: assert message != null : "Error message harus ada!"
+2026-05-08 09:32:37.385 DEBUG t.TC-AUTH-005_Login_Blank_Password       - 6: println(TC-AUTH-005 PASSED — Error message: $message)
+TC-AUTH-005 PASSED — Error message: Username and password required
+2026-05-08 09:32:37.387 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/Auth/TC-AUTH-005_Login_Blank_Password
+2026-05-08 09:32:37.390 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-05-08 09:32:37.390 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/User/TC-USER-001_getUser_ValidToken
+2026-05-08 09:32:37.454 DEBUG t.TC-USER-001_getUser_ValidToken         - 1: loginRequest = EQUALS, application/json)]).build()
+2026-05-08 09:32:37.456 DEBUG t.TC-USER-001_getUser_ValidToken         - 2: loginResponse = sendRequest(loginRequest)
+2026-05-08 09:32:37.696 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_5.har
+2026-05-08 09:32:37.699 DEBUG t.TC-USER-001_getUser_ValidToken         - 3: verifyResponseStatusCode(loginResponse, 200)
+2026-05-08 09:32:37.703 DEBUG t.TC-USER-001_getUser_ValidToken         - 4: token = getElementPropertyValue(loginResponse, "accessToken")
+2026-05-08 09:32:37.720 DEBUG t.TC-USER-001_getUser_ValidToken         - 5: assert token != null && token != "" : "Token tidak boleh kosong!"
+2026-05-08 09:32:37.722 DEBUG t.TC-USER-001_getUser_ValidToken         - 6: userRequest = EQUALS, application/json)]).build()
+2026-05-08 09:32:37.734 DEBUG t.TC-USER-001_getUser_ValidToken         - 7: userResponse = sendRequest(userRequest)
+2026-05-08 09:32:37.943 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_6.har
+2026-05-08 09:32:37.945 DEBUG t.TC-USER-001_getUser_ValidToken         - 8: verifyResponseStatusCode(userResponse, 200)
+2026-05-08 09:32:37.948 DEBUG t.TC-USER-001_getUser_ValidToken         - 9: assert userResponse.getElapsedTime() < 2000 : "Responsenya Cukup Memakan Waktu"
+2026-05-08 09:32:37.950 DEBUG t.TC-USER-001_getUser_ValidToken         - 10: id = getElementPropertyValue(userResponse, "id")
+2026-05-08 09:32:37.973 DEBUG t.TC-USER-001_getUser_ValidToken         - 11: firstName = getElementPropertyValue(userResponse, "firstName")
+2026-05-08 09:32:37.993 DEBUG t.TC-USER-001_getUser_ValidToken         - 12: lastName = getElementPropertyValue(userResponse, "lastName")
+2026-05-08 09:32:38.011 DEBUG t.TC-USER-001_getUser_ValidToken         - 13: email = getElementPropertyValue(userResponse, "email")
+2026-05-08 09:32:38.031 DEBUG t.TC-USER-001_getUser_ValidToken         - 14: username = getElementPropertyValue(userResponse, "username")
+2026-05-08 09:32:38.046 DEBUG t.TC-USER-001_getUser_ValidToken         - 15: role = getElementPropertyValue(userResponse, "role")
+2026-05-08 09:32:38.063 DEBUG t.TC-USER-001_getUser_ValidToken         - 16: assert id != null : "id harus ada!"
+2026-05-08 09:32:38.064 DEBUG t.TC-USER-001_getUser_ValidToken         - 17: assert firstName != null : "firstName harus ada!"
+2026-05-08 09:32:38.065 DEBUG t.TC-USER-001_getUser_ValidToken         - 18: assert lastName != null : "lastName harus ada!"
+2026-05-08 09:32:38.066 DEBUG t.TC-USER-001_getUser_ValidToken         - 19: assert email != null : "email harus ada!"
+2026-05-08 09:32:38.066 DEBUG t.TC-USER-001_getUser_ValidToken         - 20: assert username == "emilys" : "Username should be emilys!"
+2026-05-08 09:32:38.067 DEBUG t.TC-USER-001_getUser_ValidToken         - 21: assert role != null : "role harus ada!"
+2026-05-08 09:32:38.068 DEBUG t.TC-USER-001_getUser_ValidToken         - 22: assert id instanceof java.lang.Integer : "id harus int"
+2026-05-08 09:32:38.069 DEBUG t.TC-USER-001_getUser_ValidToken         - 23: assert firstName instanceof java.lang.String : "firstName harus string yaa"
+2026-05-08 09:32:38.069 DEBUG t.TC-USER-001_getUser_ValidToken         - 24: println(TC-USER-001 PASSED - User: $firstName $lastName, email: $email, role: $role)
+TC-USER-001 PASSED - User: Emily Johnson, email: emily.johnson@x.dummyjson.com, role: admin
+2026-05-08 09:32:38.072 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/User/TC-USER-001_getUser_ValidToken
+2026-05-08 09:32:38.075 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-05-08 09:32:38.075 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/User/TC-USER-002_getUser_InvalidToken
+2026-05-08 09:32:38.116 DEBUG t.TC-USER-002_getUser_InvalidToken       - 1: userReq = EQUALS, application/json)]).build()
+2026-05-08 09:32:38.118 DEBUG t.TC-USER-002_getUser_InvalidToken       - 2: response = sendRequest(userReq)
+2026-05-08 09:32:38.341 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_7.har
+2026-05-08 09:32:38.344 DEBUG t.TC-USER-002_getUser_InvalidToken       - 3: verifyResponseStatusCode(response, 401)
+2026-05-08 09:32:38.347 DEBUG t.TC-USER-002_getUser_InvalidToken       - 4: message = getElementPropertyValue(response, "message")
+2026-05-08 09:32:38.367 DEBUG t.TC-USER-002_getUser_InvalidToken       - 5: assert message != null : "Error message should exist!"
+2026-05-08 09:32:38.368 DEBUG t.TC-USER-002_getUser_InvalidToken       - 6: println(TC-USER-002 PASSED — Unauthorized access correctly rejected: $message)
+TC-USER-002 PASSED — Unauthorized access correctly rejected: Access Token is required
+2026-05-08 09:32:38.370 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/User/TC-USER-002_getUser_InvalidToken
+2026-05-08 09:32:38.373 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-05-08 09:32:38.373 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/User/TC-USER-003_getUser_ExpiredToken
+2026-05-08 09:32:38.414 DEBUG t.TC-USER-003_getUser_ExpiredToken       - 1: expToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJpYXQiOjE2MDAwMDAwMDAsImV4cCI6MTYwMDAwMzYwMH0.dummy"
+2026-05-08 09:32:38.415 DEBUG t.TC-USER-003_getUser_ExpiredToken       - 2: userReq = EQUALS, application/json)]).build()
+2026-05-08 09:32:38.417 DEBUG t.TC-USER-003_getUser_ExpiredToken       - 3: response = sendRequest(userReq)
+2026-05-08 09:32:38.637 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_8.har
+2026-05-08 09:32:38.638 DEBUG t.TC-USER-003_getUser_ExpiredToken       - 4: verifyResponseStatusCode(response, 401)
+2026-05-08 09:32:38.641 DEBUG t.TC-USER-003_getUser_ExpiredToken       - 5: message = getElementPropertyValue(response, "message")
+2026-05-08 09:32:38.657 DEBUG t.TC-USER-003_getUser_ExpiredToken       - 6: assert message != null : "Error message should exist!"
+2026-05-08 09:32:38.658 DEBUG t.TC-USER-003_getUser_ExpiredToken       - 7: println(TC-USER-003 PASSED — Expired token correctly rejected: $message)
+TC-USER-003 PASSED — Expired token correctly rejected: Access Token is required
+2026-05-08 09:32:38.660 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/User/TC-USER-003_getUser_ExpiredToken
+2026-05-08 09:32:38.662 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-05-08 09:32:38.662 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/User/TC-USER-004_getUser_notExist
+2026-05-08 09:32:38.709 DEBUG testcase.TC-USER-004_getUser_notExist    - 1: loginReq = EQUALS, application/json)]).build()
+2026-05-08 09:32:38.711 DEBUG testcase.TC-USER-004_getUser_notExist    - 2: loginResponse = sendRequest(loginReq)
+2026-05-08 09:32:38.913 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_9.har
+2026-05-08 09:32:38.916 DEBUG testcase.TC-USER-004_getUser_notExist    - 3: token = getElementPropertyValue(loginResponse, "accessToken")
+2026-05-08 09:32:38.930 DEBUG testcase.TC-USER-004_getUser_notExist    - 4: userReq = EQUALS, application/json)]).build()
+2026-05-08 09:32:38.932 DEBUG testcase.TC-USER-004_getUser_notExist    - 5: response = sendRequest(userReq)
+2026-05-08 09:32:39.132 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_10.har
+2026-05-08 09:32:39.134 DEBUG testcase.TC-USER-004_getUser_notExist    - 6: verifyResponseStatusCode(response, 404)
+2026-05-08 09:32:39.137 DEBUG testcase.TC-USER-004_getUser_notExist    - 7: message = getElementPropertyValue(response, "message")
+2026-05-08 09:32:39.151 DEBUG testcase.TC-USER-004_getUser_notExist    - 8: assert message != null : "Error message should exist!"
+2026-05-08 09:32:39.152 DEBUG testcase.TC-USER-004_getUser_notExist    - 9: println(TC-USER-004 PASSED — Non-existent user correctly returned 404: $message)
+TC-USER-004 PASSED — Non-existent user correctly returned 404: User with id '3124' not found
+2026-05-08 09:32:39.154 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/User/TC-USER-004_getUser_notExist
+2026-05-08 09:32:39.156 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-05-08 09:32:39.156 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/User/TC-USER-005-ResponseTime
+2026-05-08 09:32:39.191 DEBUG testcase.TC-USER-005-ResponseTime        - 1: loginReq = EQUALS, application/json)]).build()
+2026-05-08 09:32:39.192 DEBUG testcase.TC-USER-005-ResponseTime        - 2: loginResponse = sendRequest(loginReq)
+2026-05-08 09:32:39.407 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_11.har
+2026-05-08 09:32:39.409 DEBUG testcase.TC-USER-005-ResponseTime        - 3: token = getElementPropertyValue(loginResponse, "accessToken")
+2026-05-08 09:32:39.423 DEBUG testcase.TC-USER-005-ResponseTime        - 4: userReq = EQUALS, application/json)]).build()
+2026-05-08 09:32:39.425 DEBUG testcase.TC-USER-005-ResponseTime        - 5: response = sendRequest(userReq)
+2026-05-08 09:32:39.650 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_12.har
+2026-05-08 09:32:39.653 DEBUG testcase.TC-USER-005-ResponseTime        - 6: verifyResponseStatusCode(response, 200)
+2026-05-08 09:32:39.655 DEBUG testcase.TC-USER-005-ResponseTime        - 7: elapsedTime = response.getElapsedTime()
+2026-05-08 09:32:39.656 DEBUG testcase.TC-USER-005-ResponseTime        - 8: assert elapsedTime < 1000
+2026-05-08 09:32:39.657 DEBUG testcase.TC-USER-005-ResponseTime        - 9: println(TC-USER-005 PASSED — Response time: $elapsedTimems (threshold: 1000ms))
+TC-USER-005 PASSED — Response time: 222ms (threshold: 1000ms)
+2026-05-08 09:32:39.658 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/User/TC-USER-005-ResponseTime
+2026-05-08 09:32:39.661 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-05-08 09:32:39.661 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/Validation/TC-VAL-001_Schema_Check
+2026-05-08 09:32:39.731 DEBUG testcase.TC-VAL-001_Schema_Check         - 1: loginReq = EQUALS, application/json)]).build()
+2026-05-08 09:32:39.732 DEBUG testcase.TC-VAL-001_Schema_Check         - 2: loginResponse = sendRequest(loginReq)
+2026-05-08 09:32:39.945 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_13.har
+2026-05-08 09:32:39.947 DEBUG testcase.TC-VAL-001_Schema_Check         - 3: token = getElementPropertyValue(loginResponse, "accessToken")
+2026-05-08 09:32:39.964 DEBUG testcase.TC-VAL-001_Schema_Check         - 4: userReq = EQUALS, application/json)]).build()
+2026-05-08 09:32:39.966 DEBUG testcase.TC-VAL-001_Schema_Check         - 5: response = sendRequest(userReq)
+2026-05-08 09:32:40.178 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_14.har
+2026-05-08 09:32:40.180 DEBUG testcase.TC-VAL-001_Schema_Check         - 6: verifyResponseStatusCode(response, 200)
+2026-05-08 09:32:40.182 DEBUG testcase.TC-VAL-001_Schema_Check         - 7: json = JsonSlurper().parseText(response.getResponseBodyContent())
+2026-05-08 09:32:40.183 DEBUG testcase.TC-VAL-001_Schema_Check         - 8: requiredKeys = ["id", "firstName", "lastName", "email", "username", "role", "image"]
+2026-05-08 09:32:40.184 DEBUG testcase.TC-VAL-001_Schema_Check         - 9: requiredKeys.each({ java.lang.Object key -> ... })
+2026-05-08 09:32:40.192 DEBUG testcase.TC-VAL-001_Schema_Check         - 10: println("TC-VAL-001 PASSED — All required schema fields present")
+TC-VAL-001 PASSED — All required schema fields present
+2026-05-08 09:32:40.193 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/Validation/TC-VAL-001_Schema_Check
+2026-05-08 09:32:40.196 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-05-08 09:32:40.196 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/Validation/TC-VAL-002_Required_Fields_Present
+2026-05-08 09:32:40.250 DEBUG t.TC-VAL-002_Required_Fields_Present     - 1: loginReq = EQUALS, application/json)]).build()
+2026-05-08 09:32:40.252 DEBUG t.TC-VAL-002_Required_Fields_Present     - 2: loginResponse = sendRequest(loginReq)
+2026-05-08 09:32:40.470 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_15.har
+2026-05-08 09:32:40.478 DEBUG t.TC-VAL-002_Required_Fields_Present     - 3: token = getElementPropertyValue(loginResponse, "accessToken")
+2026-05-08 09:32:40.495 DEBUG t.TC-VAL-002_Required_Fields_Present     - 4: userReq = EQUALS, application/json)]).build()
+2026-05-08 09:32:40.496 DEBUG t.TC-VAL-002_Required_Fields_Present     - 5: response = sendRequest(userReq)
+2026-05-08 09:32:40.704 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_16.har
+2026-05-08 09:32:40.708 DEBUG t.TC-VAL-002_Required_Fields_Present     - 6: verifyResponseStatusCode(response, 200)
+2026-05-08 09:32:40.710 DEBUG t.TC-VAL-002_Required_Fields_Present     - 7: json = JsonSlurper().parseText(response.getResponseBodyContent())
+2026-05-08 09:32:40.711 DEBUG t.TC-VAL-002_Required_Fields_Present     - 8: assert id != null : "id should not be null!"
+2026-05-08 09:32:40.712 DEBUG t.TC-VAL-002_Required_Fields_Present     - 9: assert firstName != null && firstName != "" : "firstName should not be null or empty!"
+2026-05-08 09:32:40.712 DEBUG t.TC-VAL-002_Required_Fields_Present     - 10: assert lastName != null && lastName != "" : "lastName should not be null or empty!"
+2026-05-08 09:32:40.713 DEBUG t.TC-VAL-002_Required_Fields_Present     - 11: assert email != null && email != "" : "email should not be null or empty!"
+2026-05-08 09:32:40.713 DEBUG t.TC-VAL-002_Required_Fields_Present     - 12: assert username != null && username != "" : "username should not be null or empty!"
+2026-05-08 09:32:40.714 DEBUG t.TC-VAL-002_Required_Fields_Present     - 13: assert role != null && role != "" : "role should not be null or empty!"
+2026-05-08 09:32:40.716 DEBUG t.TC-VAL-002_Required_Fields_Present     - 14: assert image != null && image != "" : "image should not be null or empty!"
+2026-05-08 09:32:40.716 DEBUG t.TC-VAL-002_Required_Fields_Present     - 15: println("TC-VAL-002 PASSED — All required fields present and not empty")
+TC-VAL-002 PASSED — All required fields present and not empty
+2026-05-08 09:32:40.717 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/Validation/TC-VAL-002_Required_Fields_Present
+2026-05-08 09:32:40.719 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-05-08 09:32:40.719 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/Validation/TC-VAL-003_Data_Type_Validation
+2026-05-08 09:32:40.769 DEBUG t.TC-VAL-003_Data_Type_Validation        - 1: loginReq = EQUALS, application/json)]).build()
+2026-05-08 09:32:40.770 DEBUG t.TC-VAL-003_Data_Type_Validation        - 2: loginResponse = sendRequest(loginReq)
+2026-05-08 09:32:40.991 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_17.har
+2026-05-08 09:32:40.992 DEBUG t.TC-VAL-003_Data_Type_Validation        - 3: token = getElementPropertyValue(loginResponse, "accessToken")
+2026-05-08 09:32:41.006 DEBUG t.TC-VAL-003_Data_Type_Validation        - 4: userReq = EQUALS, application/json)]).build()
+2026-05-08 09:32:41.007 DEBUG t.TC-VAL-003_Data_Type_Validation        - 5: response = sendRequest(userReq)
+2026-05-08 09:32:41.215 INFO  c.k.k.core.webservice.common.HarLogger   - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_18.har
+2026-05-08 09:32:41.217 DEBUG t.TC-VAL-003_Data_Type_Validation        - 6: verifyResponseStatusCode(response, 200)
+2026-05-08 09:32:41.220 DEBUG t.TC-VAL-003_Data_Type_Validation        - 7: json = JsonSlurper().parseText(response.getResponseBodyContent())
+2026-05-08 09:32:41.221 DEBUG t.TC-VAL-003_Data_Type_Validation        - 8: assert id instanceof java.lang.Integer : "id should be Integer!"
+2026-05-08 09:32:41.222 DEBUG t.TC-VAL-003_Data_Type_Validation        - 9: assert firstName instanceof java.lang.String : "firstName should be String!"
+2026-05-08 09:32:41.223 DEBUG t.TC-VAL-003_Data_Type_Validation        - 10: assert lastName instanceof java.lang.String : "lastName should be String!"
+2026-05-08 09:32:41.223 DEBUG t.TC-VAL-003_Data_Type_Validation        - 11: assert email instanceof java.lang.String : "email should be String!"
+2026-05-08 09:32:41.224 DEBUG t.TC-VAL-003_Data_Type_Validation        - 12: assert username instanceof java.lang.String : "username should be String!"
+2026-05-08 09:32:41.224 DEBUG t.TC-VAL-003_Data_Type_Validation        - 13: assert age instanceof java.lang.Integer : "age should be Integer!"
+2026-05-08 09:32:41.225 DEBUG t.TC-VAL-003_Data_Type_Validation        - 14: assert role instanceof java.lang.String : "role should be String!"
+2026-05-08 09:32:41.226 DEBUG t.TC-VAL-003_Data_Type_Validation        - 15: println("TC-VAL-003 PASSED — All fields have correct data types")
+TC-VAL-003 PASSED — All fields have correct data types
+2026-05-08 09:32:41.228 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/Validation/TC-VAL-003_Data_Type_Validation
+2026-05-08 09:32:41.260 INFO  c.k.katalon.core.main.TestSuiteExecutor  - --------------------
+2026-05-08 09:32:41.261 INFO  c.k.katalon.core.main.TestSuiteExecutor  - END Test Suites/TS-Regression_Full
+2026-05-08 09:32:41.261 INFO  c.k.katalon.core.main.TestSuiteExecutor  - ====================

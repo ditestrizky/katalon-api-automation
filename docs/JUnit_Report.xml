@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="TS-Regression_Full" time="6.671" tests="13" failures="0" errors="0">
+   <testsuite name="TS-Regression_Full" tests="13" failures="0" errors="0" time="6.671" skipped="0" timestamp="2026-05-08T02:32:34.557Z" hostname="Haryadi - DESKTOP-LA5M7LN" id="Test Suites/TS-Regression_Full">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="C:\\Users\\Haryadi\\Katalon Studio\\katalon-api-automation\\Reports\\20260508_093232\\TS-Regression_Full\\20260508_093232"/>
+         <property name="logFiles" value="C:\\Users\\Haryadi\\Katalon Studio\\katalon-api-automation\\Reports\\20260508_093232\\TS-Regression_Full\\20260508_093232\\console0.log, C:\\Users\\Haryadi\\Katalon Studio\\katalon-api-automation\\Reports\\20260508_093232\\TS-Regression_Full\\20260508_093232\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="Rizky Haryadi"/>
+         <property name="hostName" value="Haryadi - DESKTOP-LA5M7LN"/>
+         <property name="hostAddress" value="192.168.100.84"/>
+         <property name="projectName" value="web-service-tests"/>
+         <property name="os" value="Windows 11 64bit"/>
+         <property name="katalonVersion" value="10.2.4.0"/>
+      </properties>
+      <testcase name="Test Cases/Auth/TC-AUTH-001_Login_Valid" time="1.275" classname="Test Cases/Auth/TC-AUTH-001_Login_Valid" status="PASSED">
+         <system-out><![CDATA[08-05-2026T09:32:34 - [TEST_CASE][PASSED] - Test Cases/Auth/TC-AUTH-001_Login_Valid: Test Cases/Auth/TC-AUTH-001_Login_Valid
+
+08-05-2026T09:32:35 - [TEST_STEP][PASSED] - req = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:35 - [TEST_STEP][PASSED] - response = sendRequest(req): Send request successfully
+
+08-05-2026T09:32:36 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_0.har
+
+08-05-2026T09:32:36 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+08-05-2026T09:32:36 - [MESSAGE][PASSED] - Verify response status code successfully
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - assert response.getElapsedTime() < 2000 : "Response to slow!": null
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - token = getElementPropertyValue(response, "accessToken"): null
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - assert token != null && token != "" : "Token tidak boleh kosong!": null
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - println(TC-AUTH-001 Passed - Token: $token): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Auth/TC-AUTH-002-Login-Invalid-Password" time="0.311" classname="Test Cases/Auth/TC-AUTH-002-Login-Invalid-Password" status="PASSED">
+         <system-out><![CDATA[08-05-2026T09:32:36 - [TEST_CASE][PASSED] - Test Cases/Auth/TC-AUTH-002-Login-Invalid-Password: Test Cases/Auth/TC-AUTH-002-Login-Invalid-Password
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - req = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - response = sendRequest(req): Send request successfully
+
+08-05-2026T09:32:36 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_1.har
+
+08-05-2026T09:32:36 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 400): Verify response status code successfully
+
+08-05-2026T09:32:36 - [MESSAGE][PASSED] - Verify response status code successfully
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - message = getElementPropertyValue(response, "message"): null
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - assert message == "Invalid credentials" : "Wrong error message!": null
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - println(✅ TC-AUTH-002 PASSED — Error message: $message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Auth/TC-AUTH-003_Login_Unregistered_Username" time="0.297" classname="Test Cases/Auth/TC-AUTH-003_Login_Unregistered_Username" status="PASSED">
+         <system-out><![CDATA[08-05-2026T09:32:36 - [TEST_CASE][PASSED] - Test Cases/Auth/TC-AUTH-003_Login_Unregistered_Username: Test Cases/Auth/TC-AUTH-003_Login_Unregistered_Username
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - req = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - response = sendRequest(req): Send request successfully
+
+08-05-2026T09:32:36 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_2.har
+
+08-05-2026T09:32:36 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 400): Verify response status code successfully
+
+08-05-2026T09:32:36 - [MESSAGE][PASSED] - Verify response status code successfully
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - message = getElementPropertyValue(response, "message"): null
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - assert message != null : "Error message harus ada!": null
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - println(TC-AUTH-003 PASSED — Error message: $message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Auth/TC-AUTH-004_Login_Blank_Username" time="0.298" classname="Test Cases/Auth/TC-AUTH-004_Login_Blank_Username" status="PASSED">
+         <system-out><![CDATA[08-05-2026T09:32:36 - [TEST_CASE][PASSED] - Test Cases/Auth/TC-AUTH-004_Login_Blank_Username: Test Cases/Auth/TC-AUTH-004_Login_Blank_Username
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - req = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:36 - [TEST_STEP][PASSED] - response = sendRequest(req): Send request successfully
+
+08-05-2026T09:32:37 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_3.har
+
+08-05-2026T09:32:37 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 400): Verify response status code successfully
+
+08-05-2026T09:32:37 - [MESSAGE][PASSED] - Verify response status code successfully
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - message = getElementPropertyValue(response, "message"): null
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - assert message != null : "Error message harus ada!": null
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - println(TC-AUTH-004 PASSED — Error message: $message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Auth/TC-AUTH-005_Login_Blank_Password" time="0.284" classname="Test Cases/Auth/TC-AUTH-005_Login_Blank_Password" status="PASSED">
+         <system-out><![CDATA[08-05-2026T09:32:37 - [TEST_CASE][PASSED] - Test Cases/Auth/TC-AUTH-005_Login_Blank_Password: Test Cases/Auth/TC-AUTH-005_Login_Blank_Password
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - req = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - response = sendRequest(req): Send request successfully
+
+08-05-2026T09:32:37 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_4.har
+
+08-05-2026T09:32:37 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 400): Verify response status code successfully
+
+08-05-2026T09:32:37 - [MESSAGE][PASSED] - Verify response status code successfully
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - message = getElementPropertyValue(response, "message"): null
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - assert message != null : "Error message harus ada!": null
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - println(TC-AUTH-005 PASSED — Error message: $message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/User/TC-USER-001_getUser_ValidToken" time="0.682" classname="Test Cases/User/TC-USER-001_getUser_ValidToken" status="PASSED">
+         <system-out><![CDATA[08-05-2026T09:32:37 - [TEST_CASE][PASSED] - Test Cases/User/TC-USER-001_getUser_ValidToken: Test Cases/User/TC-USER-001_getUser_ValidToken
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - loginRequest = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - loginResponse = sendRequest(loginRequest): Send request successfully
+
+08-05-2026T09:32:37 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_5.har
+
+08-05-2026T09:32:37 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - verifyResponseStatusCode(loginResponse, 200): Verify response status code successfully
+
+08-05-2026T09:32:37 - [MESSAGE][PASSED] - Verify response status code successfully
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - token = getElementPropertyValue(loginResponse, "accessToken"): null
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - assert token != null && token != "" : "Token tidak boleh kosong!": null
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - userRequest = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - userResponse = sendRequest(userRequest): Send request successfully
+
+08-05-2026T09:32:37 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_6.har
+
+08-05-2026T09:32:37 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - verifyResponseStatusCode(userResponse, 200): Verify response status code successfully
+
+08-05-2026T09:32:37 - [MESSAGE][PASSED] - Verify response status code successfully
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - assert userResponse.getElapsedTime() < 2000 : "Responsenya Cukup Memakan Waktu": null
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - id = getElementPropertyValue(userResponse, "id"): null
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - firstName = getElementPropertyValue(userResponse, "firstName"): null
+
+08-05-2026T09:32:37 - [TEST_STEP][PASSED] - lastName = getElementPropertyValue(userResponse, "lastName"): null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - email = getElementPropertyValue(userResponse, "email"): null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - username = getElementPropertyValue(userResponse, "username"): null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - role = getElementPropertyValue(userResponse, "role"): null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - assert id != null : "id harus ada!": null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - assert firstName != null : "firstName harus ada!": null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - assert lastName != null : "lastName harus ada!": null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - assert email != null : "email harus ada!": null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - assert username == "emilys" : "Username should be emilys!": null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - assert role != null : "role harus ada!": null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - assert id instanceof java.lang.Integer : "id harus int": null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - assert firstName instanceof java.lang.String : "firstName harus string yaa": null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - println(TC-USER-001 PASSED - User: $firstName $lastName, email: $email, role: $role): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/User/TC-USER-002_getUser_InvalidToken" time="0.295" classname="Test Cases/User/TC-USER-002_getUser_InvalidToken" status="PASSED">
+         <system-out><![CDATA[08-05-2026T09:32:38 - [TEST_CASE][PASSED] - Test Cases/User/TC-USER-002_getUser_InvalidToken: Test Cases/User/TC-USER-002_getUser_InvalidToken
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - userReq = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - response = sendRequest(userReq): Send request successfully
+
+08-05-2026T09:32:38 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_7.har
+
+08-05-2026T09:32:38 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 401): Verify response status code successfully
+
+08-05-2026T09:32:38 - [MESSAGE][PASSED] - Verify response status code successfully
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - message = getElementPropertyValue(response, "message"): null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - assert message != null : "Error message should exist!": null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - println(TC-USER-002 PASSED — Unauthorized access correctly rejected: $message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/User/TC-USER-003_getUser_ExpiredToken" time="0.287" classname="Test Cases/User/TC-USER-003_getUser_ExpiredToken" status="PASSED">
+         <system-out><![CDATA[08-05-2026T09:32:38 - [TEST_CASE][PASSED] - Test Cases/User/TC-USER-003_getUser_ExpiredToken: Test Cases/User/TC-USER-003_getUser_ExpiredToken
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - expToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJpYXQiOjE2MDAwMDAwMDAsImV4cCI6MTYwMDAwMzYwMH0.dummy": null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - userReq = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - response = sendRequest(userReq): Send request successfully
+
+08-05-2026T09:32:38 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_8.har
+
+08-05-2026T09:32:38 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 401): Verify response status code successfully
+
+08-05-2026T09:32:38 - [MESSAGE][PASSED] - Verify response status code successfully
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - message = getElementPropertyValue(response, "message"): null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - assert message != null : "Error message should exist!": null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - println(TC-USER-003 PASSED — Expired token correctly rejected: $message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/User/TC-USER-004_getUser_notExist" time="0.492" classname="Test Cases/User/TC-USER-004_getUser_notExist" status="PASSED">
+         <system-out><![CDATA[08-05-2026T09:32:38 - [TEST_CASE][PASSED] - Test Cases/User/TC-USER-004_getUser_notExist: Test Cases/User/TC-USER-004_getUser_notExist
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - loginReq = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - loginResponse = sendRequest(loginReq): Send request successfully
+
+08-05-2026T09:32:38 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_9.har
+
+08-05-2026T09:32:38 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - token = getElementPropertyValue(loginResponse, "accessToken"): null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - userReq = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:38 - [TEST_STEP][PASSED] - response = sendRequest(userReq): Send request successfully
+
+08-05-2026T09:32:39 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_10.har
+
+08-05-2026T09:32:39 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 404): Verify response status code successfully
+
+08-05-2026T09:32:39 - [MESSAGE][PASSED] - Verify response status code successfully
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - message = getElementPropertyValue(response, "message"): null
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - assert message != null : "Error message should exist!": null
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - println(TC-USER-004 PASSED — Non-existent user correctly returned 404: $message): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/User/TC-USER-005-ResponseTime" time="0.502" classname="Test Cases/User/TC-USER-005-ResponseTime" status="PASSED">
+         <system-out><![CDATA[08-05-2026T09:32:39 - [TEST_CASE][PASSED] - Test Cases/User/TC-USER-005-ResponseTime: Test Cases/User/TC-USER-005-ResponseTime
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - loginReq = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - loginResponse = sendRequest(loginReq): Send request successfully
+
+08-05-2026T09:32:39 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_11.har
+
+08-05-2026T09:32:39 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - token = getElementPropertyValue(loginResponse, "accessToken"): null
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - userReq = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - response = sendRequest(userReq): Send request successfully
+
+08-05-2026T09:32:39 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_12.har
+
+08-05-2026T09:32:39 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+08-05-2026T09:32:39 - [MESSAGE][PASSED] - Verify response status code successfully
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - elapsedTime = response.getElapsedTime(): null
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - assert elapsedTime < 1000: null
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - println(TC-USER-005 PASSED — Response time: $elapsedTimems (threshold: 1000ms)): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Validation/TC-VAL-001_Schema_Check" time="0.533" classname="Test Cases/Validation/TC-VAL-001_Schema_Check" status="PASSED">
+         <system-out><![CDATA[08-05-2026T09:32:39 - [TEST_CASE][PASSED] - Test Cases/Validation/TC-VAL-001_Schema_Check: Test Cases/Validation/TC-VAL-001_Schema_Check
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - loginReq = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - loginResponse = sendRequest(loginReq): Send request successfully
+
+08-05-2026T09:32:39 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_13.har
+
+08-05-2026T09:32:39 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - token = getElementPropertyValue(loginResponse, "accessToken"): null
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - userReq = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:39 - [TEST_STEP][PASSED] - response = sendRequest(userReq): Send request successfully
+
+08-05-2026T09:32:40 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_14.har
+
+08-05-2026T09:32:40 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+08-05-2026T09:32:40 - [MESSAGE][PASSED] - Verify response status code successfully
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - json = JsonSlurper().parseText(response.getResponseBodyContent()): null
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - requiredKeys = ["id", "firstName", "lastName", "email", "username", "role", "image"]: null
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - requiredKeys.each({ java.lang.Object key -> ... }): null
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - println("TC-VAL-001 PASSED — All required schema fields present"): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Validation/TC-VAL-002_Required_Fields_Present" time="0.521" classname="Test Cases/Validation/TC-VAL-002_Required_Fields_Present" status="PASSED">
+         <system-out><![CDATA[08-05-2026T09:32:40 - [TEST_CASE][PASSED] - Test Cases/Validation/TC-VAL-002_Required_Fields_Present: Test Cases/Validation/TC-VAL-002_Required_Fields_Present
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - loginReq = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - loginResponse = sendRequest(loginReq): Send request successfully
+
+08-05-2026T09:32:40 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_15.har
+
+08-05-2026T09:32:40 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - token = getElementPropertyValue(loginResponse, "accessToken"): null
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - userReq = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - response = sendRequest(userReq): Send request successfully
+
+08-05-2026T09:32:40 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_16.har
+
+08-05-2026T09:32:40 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+08-05-2026T09:32:40 - [MESSAGE][PASSED] - Verify response status code successfully
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - json = JsonSlurper().parseText(response.getResponseBodyContent()): null
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - assert id != null : "id should not be null!": null
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - assert firstName != null && firstName != "" : "firstName should not be null or empty!": null
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - assert lastName != null && lastName != "" : "lastName should not be null or empty!": null
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - assert email != null && email != "" : "email should not be null or empty!": null
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - assert username != null && username != "" : "username should not be null or empty!": null
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - assert role != null && role != "" : "role should not be null or empty!": null
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - assert image != null && image != "" : "image should not be null or empty!": null
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - println("TC-VAL-002 PASSED — All required fields present and not empty"): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Validation/TC-VAL-003_Data_Type_Validation" time="0.509" classname="Test Cases/Validation/TC-VAL-003_Data_Type_Validation" status="PASSED">
+         <system-out><![CDATA[08-05-2026T09:32:40 - [TEST_CASE][PASSED] - Test Cases/Validation/TC-VAL-003_Data_Type_Validation: Test Cases/Validation/TC-VAL-003_Data_Type_Validation
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - loginReq = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - loginResponse = sendRequest(loginReq): Send request successfully
+
+08-05-2026T09:32:40 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_17.har
+
+08-05-2026T09:32:40 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:40 - [TEST_STEP][PASSED] - token = getElementPropertyValue(loginResponse, "accessToken"): null
+
+08-05-2026T09:32:41 - [TEST_STEP][PASSED] - userReq = EQUALS, application/json)]).build(): null
+
+08-05-2026T09:32:41 - [TEST_STEP][PASSED] - response = sendRequest(userReq): Send request successfully
+
+08-05-2026T09:32:41 - [MESSAGE][INFO] - HAR: C:\Users\Haryadi\Katalon Studio\katalon-api-automation\Reports\20260508_093232\TS-Regression_Full\20260508_093232\requests\main\null_18.har
+
+08-05-2026T09:32:41 - [MESSAGE][PASSED] - Send request successfully
+
+08-05-2026T09:32:41 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+08-05-2026T09:32:41 - [MESSAGE][PASSED] - Verify response status code successfully
+
+08-05-2026T09:32:41 - [TEST_STEP][PASSED] - json = JsonSlurper().parseText(response.getResponseBodyContent()): null
+
+08-05-2026T09:32:41 - [TEST_STEP][PASSED] - assert id instanceof java.lang.Integer : "id should be Integer!": null
+
+08-05-2026T09:32:41 - [TEST_STEP][PASSED] - assert firstName instanceof java.lang.String : "firstName should be String!": null
+
+08-05-2026T09:32:41 - [TEST_STEP][PASSED] - assert lastName instanceof java.lang.String : "lastName should be String!": null
+
+08-05-2026T09:32:41 - [TEST_STEP][PASSED] - assert email instanceof java.lang.String : "email should be String!": null
+
+08-05-2026T09:32:41 - [TEST_STEP][PASSED] - assert username instanceof java.lang.String : "username should be String!": null
+
+08-05-2026T09:32:41 - [TEST_STEP][PASSED] - assert age instanceof java.lang.Integer : "age should be Integer!": null
+
+08-05-2026T09:32:41 - [TEST_STEP][PASSED] - assert role instanceof java.lang.String : "role should be String!": null
+
+08-05-2026T09:32:41 - [TEST_STEP][PASSED] - println("TC-VAL-003 PASSED — All fields have correct data types"): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[08-05-2026T09:32:34 - [TEST_SUITE][PASSED] - TS-Regression_Full: null]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

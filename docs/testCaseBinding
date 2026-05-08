@@ -1,0 +1,13 @@
+{"testCaseName":"Test Cases/Auth/TC-AUTH-001_Login_Valid","testCaseId":"Test Cases/Auth/TC-AUTH-001_Login_Valid","iterationVariableName":""}
+{"testCaseName":"Test Cases/Auth/TC-AUTH-002-Login-Invalid-Password","testCaseId":"Test Cases/Auth/TC-AUTH-002-Login-Invalid-Password","iterationVariableName":""}
+{"testCaseName":"Test Cases/Auth/TC-AUTH-003_Login_Unregistered_Username","testCaseId":"Test Cases/Auth/TC-AUTH-003_Login_Unregistered_Username","iterationVariableName":""}
+{"testCaseName":"Test Cases/Auth/TC-AUTH-004_Login_Blank_Username","testCaseId":"Test Cases/Auth/TC-AUTH-004_Login_Blank_Username","iterationVariableName":""}
+{"testCaseName":"Test Cases/Auth/TC-AUTH-005_Login_Blank_Password","testCaseId":"Test Cases/Auth/TC-AUTH-005_Login_Blank_Password","iterationVariableName":""}
+{"testCaseName":"Test Cases/User/TC-USER-001_getUser_ValidToken","testCaseId":"Test Cases/User/TC-USER-001_getUser_ValidToken","iterationVariableName":""}
+{"testCaseName":"Test Cases/User/TC-USER-002_getUser_InvalidToken","testCaseId":"Test Cases/User/TC-USER-002_getUser_InvalidToken","iterationVariableName":""}
+{"testCaseName":"Test Cases/User/TC-USER-003_getUser_ExpiredToken","testCaseId":"Test Cases/User/TC-USER-003_getUser_ExpiredToken","iterationVariableName":""}
+{"testCaseName":"Test Cases/User/TC-USER-004_getUser_notExist","testCaseId":"Test Cases/User/TC-USER-004_getUser_notExist","iterationVariableName":""}
+{"testCaseName":"Test Cases/User/TC-USER-005-ResponseTime","testCaseId":"Test Cases/User/TC-USER-005-ResponseTime","iterationVariableName":""}
+{"testCaseName":"Test Cases/Validation/TC-VAL-001_Schema_Check","testCaseId":"Test Cases/Validation/TC-VAL-001_Schema_Check","iterationVariableName":""}
+{"testCaseName":"Test Cases/Validation/TC-VAL-002_Required_Fields_Present","testCaseId":"Test Cases/Validation/TC-VAL-002_Required_Fields_Present","iterationVariableName":""}
+{"testCaseName":"Test Cases/Validation/TC-VAL-003_Data_Type_Validation","testCaseId":"Test Cases/Validation/TC-VAL-003_Data_Type_Validation","iterationVariableName":""}
