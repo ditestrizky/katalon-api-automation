@@ -21,7 +21,7 @@ steps:
   - bash: |
       ./Katalon_Studio_Engine_Linux_64-${KATALON_VERSION}/katalonc \
         -apiKey="$(KATALON_API_KEY)" \
-        -projectPath="$(System.DefaultWorkingDirectory)/web-service-tests.prj" \
+        -projectPath="$(System.DefaultWorkingDirectory)/katalon-api-automation.prj" \
         -testSuitePath="Test Suites/TS-Regression_Full" \
         -browserType="Chrome"
     displayName: Run API Test Suite
