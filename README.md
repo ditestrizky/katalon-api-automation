@@ -6,7 +6,8 @@ Target API: [dummyjson.com](https://dummyjson.com) (simulasi authentication & us
 ## Tech Stack
 - Katalon Studio 10.2.4
 - Groovy
-- CI/CD: Azure Pipelines, GitHub Actions
+- CI/CD: GitHub Actions, Configured for Azure Pipelines 
+(requires Katalon Runtime Engine license)
 
 ## Test Coverage
 
