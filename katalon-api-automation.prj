@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
    <description></description>
-   <name>web-service-tests</name>
+   <name>katalon-api-automation</name>
    <tag></tag>
    <UUID>325087cc-ccef-4b10-87fd-af8482a31b63</UUID>
    <freeLicense>true</freeLicense>
@@ -9,7 +9,7 @@
    <modifiedEdition>FREE</modifiedEdition>
    <modifiedVersion>10.2.4</modifiedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
-   <projectFileLocation>C:\Users\Haryadi\Katalon Studio\katalon-api-automation\web-service-tests.prj</projectFileLocation>
+   <projectFileLocation>C:\Users\Haryadi\Katalon Studio\katalon-api-automation\katalon-api-automation.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
