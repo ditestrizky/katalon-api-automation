@@ -1,39 +1,21 @@
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import common.ApiHelper
 import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.RestRequestObjectBuilder
 import com.kms.katalon.core.testobject.TestObjectProperty
 import com.kms.katalon.core.testobject.ConditionType
 
-//Get token
+def token = ApiHelper.getToken()
 
-RequestObject loginRequest = new RestRequestObjectBuilder()
-.withRestUrl('https://dummyjson.com/auth/login')
-.withRestRequestMethod('POST')
-.withTextBodyContent('{"username": "emilys", "password": "emilyspass"}')
-.withHttpHeaders([
-	new TestObjectProperty('Content-Type', ConditionType.EQUALS, 'application/json')
-])
-.build()
-
-def loginResponse = WS.sendRequest(loginRequest)
-WS.verifyResponseStatusCode(loginResponse, 200)
-
-def token = WS.getElementPropertyValue(loginResponse, 'accessToken')
 assert token != null && token !='' : "Token tidak boleh kosong!"
 
 RequestObject userRequest = new RestRequestObjectBuilder()
 .withRestUrl('https://dummyjson.com/auth/me')
 .withRestRequestMethod('GET')
-.withHttpHeaders([
-	new TestObjectProperty('Authorization', ConditionType.EQUALS, "Bearer ${token}"),
-	new TestObjectProperty('Content-Type', ConditionType.EQUALS, 'application/json')
-])
+.withHttpHeaders(ApiHelper.getAuthHeaders(token))
 .build()
 
 def userResponse = WS.sendRequest(userRequest)
-
-//println "Status:${userResponse.getStatusCode()}"
-//println "Body:${userResponse.getResponseBodyContent()}"
 
 WS.verifyResponseStatusCode(userResponse, 200)
 assert userResponse.getElapsedTime() < 2000 :"Responsenya Cukup Memakan Waktu"

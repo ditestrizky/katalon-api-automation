@@ -10,7 +10,7 @@ RequestObject userReq = new RestRequestObjectBuilder()
     .withRestUrl('https://dummyjson.com/auth/me')
     .withRestRequestMethod('GET')
     .withHttpHeaders([
-		new TestObjectProperty('Autorization', ConditionType.EQUALS, "Bearer ${expToken}"),
+		new TestObjectProperty('Authorization', ConditionType.EQUALS, "Bearer ${expToken}"),
         new TestObjectProperty('Content-Type', ConditionType.EQUALS, 'application/json')
     ])
     .build()
